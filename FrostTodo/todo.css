@@ -1,0 +1,74 @@
+body {
+    font-family: Arial;
+    background: linear-gradient(45deg, #3f87a6, #ebf8e1, #f69d3c);
+    background-size: 600% 600%;
+    animation: gradient 16s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes gradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+#app-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    max-width: 90vw;
+}
+
+#main-heading {
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 10px;
+    row-gap: 10px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+#todo-input, #todo-date {
+    font-size: 15px;
+    padding: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: white;
+}
+
+.btn-delete {
+    background-color: rgb(87, 4, 4);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 0px;
+    cursor: pointer;
+}
+
+.btn-todo {
+    background-color: rgb(5, 119, 19);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 0px;
+    cursor: pointer;
+}
+
+.btn-todo:hover, .btn-delete:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
